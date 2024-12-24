@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hom</title>
+</head>
+<body>
+    
+    <h1 style="margin-left: auto;">* spisok zadach :  *</h1> <br>
+
+ <ul>
+  {% for task in tasks %}
+  <li>{{ task.text }} </li>
+  {% empty %}
+  <p>No tasks available.</p>
+  {% endfor %}
+</ul>
+<a href="{% url 'task_create' %}">Create New Task</a>
+
+
+
+</body>
+</html>
